@@ -1,32 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Jayden Hernandez's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css"/> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+<header>
+  <nav>
+    <h3>
+      <a href="#Intro" class="inpage-link">intro</a>
+      <img src="imgs/gray-square.jpg" alt="a gray square">
+      <a href="#About" class="inpage-link">about</a>
+      <img src="imgs/gray-square.jpg" alt="A gray square">
+      <a href="#Contact" class="inpage-link">contact</a>
+    </h3>
+  </nav>
+</header>
+<hr>
 <main>
-
-        <div class="description">
-            <div>
-                <img class="face-picture" src="{% static 'img/self.jpg' %}" alt="Picture of Gáspár Nagy">
-            </div>
-            <h2>Gáspár Nagy</h2>
-            <h3>Front-end web developer</h3>
-            <p class="description-text">Hi, I'm Jayden Hernandez, this is my portfolio page where you can see all my previous web and application development projects and my experience in different languages and frameworks. For references or queries, contact me using the form on the Contact page.</p>
-        </div>
-
-        <div class="container">
-
-            <h2>MY PORTFOLIO</h2>
-
-            <div class="item-container">
-                {% for project in projects %}
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-text-container">
-                            <h3 class="portfolio-item-title">{{project.title}}</h3>
-                            <p class="portfolio-item-text">{{project.description}}</p>
-                        </div>
-                        <div class="portfolio-item-logo">
-                            <img class="logo" src="{% static project.imagepath %}" alt="{{project.technology}}">
-                        </div>
-                    </div>
-               
-            </div>
-
-        </div>
-
-    </main>
+  <article>
+<!--pic, name-->
+<div class="wrapper">
+   <img class="pic-self" src="imgs/pic-of-self.jpg" width="200" alt="picture of Jayden Hernandez" /> 
+   <h1 class="name">Hi! I'm Jayden.</h1>
+</div>
+</article>
+<img class="center" src="imgs/gray-line.jpg" alt="a gray line" />
+<!--Intro-->
+<article>
+<div>
+<h2 class="clear">I am an upcoming software engineer ready to learn and put my skills to work!</h2>
+<h3>You can find me in the Raleigh, NC area.</h3>
+</div>
+</article>
+<img class="center" src="imgs/gray-line.jpg" alt="a gray line" />
+<!--About Me (description of interest & teamwork, some interests outside of code)-->
+<div>
+<h2 id="About">--about--</h2>
+<p>I am currently a stay-at-home mom with a background in upper management and customer service. Although my past job experiences would not reflect it, I have been in love with web design since high school. I never thought I'd have my chance to chase my coding dreams.</p>
+<p>Shortly after the birth of my son, I found Thinkful. This program has reinvigorated my passion for web development and has opened my eyes to various opportunities to share my passion with other developers. I am eager to work on projects with like-minded people!</p>
+<p>Along with coding I enjoy:</p>
+  <ul>
+    <li>most art forms (digital is my favorite!)</li>
+    <li>crafting</li>
+    <li>writing</li>
+    <li>playing pc & xbox</li>
+  </ul>
+</div>
+<img class="center" src="imgs/gray-line.jpg" alt="a gray line"/>
+<div id="Contact">
+<!--Contact (link to linkedin, github, email)-->
+<h2>--contact--</h2>
+<p>Feel free to contact me. The best ways to get in touch are:</p>
+  <ol>
+    <li><a class="out-link" href="mailto:jasminestone0825@gmail.com" target="_blank">email</a></li>
+    <li><a class="out-link" href="https://github.com/JStone0825" target="_blank">GitHub</a></li>
+    <li><a class="out-link" href="https://www.linkedin.com/in/jasmine-stone-309b19206/" target="_blank">LinkedIn</a></li>
+  </ol>
+</div>
+</main>
+<footer>
+<hr>
+</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
